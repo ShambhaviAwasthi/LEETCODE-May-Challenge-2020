@@ -7,14 +7,14 @@
 class Solution {
     public boolean canConstruct(String ransomNote, String magazine) {
         int[] count = new int[256]; 
-        char []str3 = magazine.toCharArray(); 
-        for (int i = 0; i < str3.length; i++) 
-            count[str3[i]]++; 
-        char []str4 = ransomNote.toCharArray(); 
-        for (int i = 0; i < str4.length; i++) { 
-            if (count[str4[i]] == 0) 
+        char []str1 = magazine.toCharArray(); 
+        for (int i = 0; i < str1.length; i++) 
+            count[str1[i]]++; 
+        char []str2 = ransomNote.toCharArray(); 
+        for (int i = 0; i < str2.length; i++) { 
+            if (count[str2[i]] == 0) 
                 return false; 
-            count[str4[i]]--; 
+            count[str2[i]]--; 
         } 
         return true; 
     }
